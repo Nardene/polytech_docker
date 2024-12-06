@@ -23,8 +23,8 @@ jobs:
           java-version: "21"
           cache: "maven"
 
-      - name: Test with Maven
-        run: mvn -B clean test --file pom.xml #Il sait auto que pom.xml est a la racine / -B enleve interaction humaine pour l'install
+      # - name: Test with Maven
+      #   run: mvn -B clean test --file pom.xml #Il sait auto que pom.xml est a la racine / -B enleve interaction humaine pour l'install
 
       - name: Build with Maven
         run: mvn -B package --file pom.xml # On build
