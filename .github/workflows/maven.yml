@@ -15,20 +15,20 @@ jobs:
     steps:
       - names: Checkout du code
         uses: actions/checkout@v3
-      
+
       - name: Set up JDK 21
         uses: actions/setup-java@v4
-          with:
-            distribution: 'temurin' # See 'Supported distributions' for available options
-            java-version: '21'
-            cache: 'maven'
-      
+        with:
+          distribution: "temurin" # See 'Supported distributions' for available options
+          java-version: "21"
+          cache: "maven"
+
       - name: Test with Maven
         run: mvn -B clean test --file pom.xml #Il sait auto que pom.xml est a la racine / -B enleve interaction humaine pour l'install
 
       - name: Build with Maven
         run: mvn -B package --file pom.xml # On build
-      
+
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
