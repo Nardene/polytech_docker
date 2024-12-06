@@ -45,4 +45,4 @@ jobs:
           context: .
           file: Dockerfile
           push: true
-          tags: rg.fr-par.scw.cloud/polytech2024/vremy/backend:v1
+          tags: rg.fr-par.scw.cloud/polytech-2024/vremy/backend:v1
